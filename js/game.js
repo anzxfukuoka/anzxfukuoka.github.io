@@ -197,7 +197,7 @@ function drawRestartUI(time, score){
 	ctx.fillText("score: " + score, gameWidth/2 - 100, gameHeight/2 + 60);
 }
 
-var fps = 1000/30;
+var fps = 1000/120;
 var cellSize = 64;
 
 var gameWidth = 0;
