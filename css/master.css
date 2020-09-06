@@ -1,4 +1,12 @@
 body{
-  background: #222222;
-  color: #aa00ff;
+	background: #222222;
+	color: #aa00ff;
+	padding: 0px;
+	margin: 0px;
+}
+
+#game_canv{
+	background-color: #000000;
+	padding: 0px;
+	margin: 0px;
 }
