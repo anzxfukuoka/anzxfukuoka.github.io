@@ -75,7 +75,7 @@ class Block extends GameObj{
 	onCollision(gameObj2){
 		super.onCollision(gameObj2);
 		if(gameObj2.name = "erraser"){
-			
+
 			var index = blocks.indexOf(this);
 			blocks.splice(index, 1);
 			//blocks.pop();
@@ -217,7 +217,7 @@ var time = 0;
 
 var player = null;
 
-var block_size = new Point(100, 300);
+var block_size = new Point(60, 180);
 var blocks_count = 0;
 var blocks = [];
 
@@ -286,7 +286,7 @@ function onUpdate(){
 
 		//draw
 		clearCanvas();
-		
+
 		erraser.draw
 
 		for (var i = 0; i < blocks.length; i++) {
