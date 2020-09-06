@@ -1,9 +1,9 @@
 import telebot
 
 token = "1147646527:AAFuN6dgHLIouVHdouQVgNdFU8J3kKFxPOs"
-game_url = "https://google.com"
+game_url = "https://anzxfukuoka.github.io/"
 
-bot = telebot.TeleBot(token, parse_mode=None) # You can set parse_mode by default. HTML or MARKDOWN
+bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
@@ -13,23 +13,10 @@ def send_welcome(message):
 def echo_all(message):
 	bot.reply_to(message, message.text)
 
-
-@bot.inline_handler(func=lambda query: len(query.query) > 0)
-def query_text(query):
-    print("Query message is text")
-
-@bot.inline_handler(lambda query: query.query == 'text')
-def query_text(inline_query):
-    print("Query message is text")
-
 @bot.callback_query_handler(func=lambda call: True)
 def query_handler(call):
     print(call)
-    bot.answer_inline_query(call.id, game_url)
+    bot.answer_callback_query(callback_query_id=call.id, url=game_url)
 
-
-@bot.inline_handler(lambda query: query.query == 'text')
-def query_text(inline_query):
-    bot.answer_inline_query(inline_query.id, game_url)
 
 bot.polling()
