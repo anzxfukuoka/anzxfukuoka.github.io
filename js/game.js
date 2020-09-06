@@ -217,7 +217,7 @@ var time = 0;
 
 var player = null;
 
-var block_size = new Point(40, 120);
+var block_size = new Point(100, 300);
 var blocks_count = 0;
 var blocks = [];
 
