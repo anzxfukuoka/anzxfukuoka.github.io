@@ -192,12 +192,12 @@ function drawRestartUI(time, score){
 
 	ctx.font = "30px Comic Sans MS";
 	ctx.fillStyle = "#ffffff";
-	ctx.fillText("GAME OVER", gameWidth/2 - 80, gameHeight/2);
-	ctx.fillText("time: " + time, gameWidth/2 - 80, gameHeight/2 + 30);
-	ctx.fillText("score: " + score, gameWidth/2 - 80, gameHeight/2 + 60);
+	ctx.fillText("GAME OVER", gameWidth/2 - 100, gameHeight/2);
+	ctx.fillText("time: " + time, gameWidth/2 - 100, gameHeight/2 + 30);
+	ctx.fillText("score: " + score, gameWidth/2 - 100, gameHeight/2 + 60);
 }
 
-var fps = 1000/60;
+var fps = 1000/30;
 var cellSize = 64;
 
 var gameWidth = 0;
@@ -217,7 +217,7 @@ var time = 0;
 
 var player = null;
 
-var block_size = new Point(20, 60);
+var block_size = new Point(40, 120);
 var blocks_count = 0;
 var blocks = [];
 
